@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function toggle(){
+		document.getElementById('sidebar').classList.toggle("active");
+	}
+</script>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	font-family:tahoma;
+	list-style:none;
+}
+body{
+	background:#031320;
+}
+#sidebar{
+	position:fixed;
+	left:-200px;
+	width:200px;
+	height:100%;
+	background:#151719;
+	transition:all 0.6s linear;
+}
+#sidebar.active{
+	left:0px;
+}
+
+#sidebar ul li{
+	color:rgba(230,230,230,0.9);
+	padding:15px 10px;
+	border-bottom:1px solid rgba(100,100,100,0.3)
+}
+.nav{
+	position:absolute;
+	top:20px;
+	left:230px;
+}
+.nav span{
+	display:block;
+	height:5px;
+	border-radius:20px;
+	background:#fff;
+	margin:5px 0;
+	transition:0.8s;
+}
+.nav span.one{
+	width:45px;
+}
+.nav span.two{
+	width:25px;
+}
+.nav span.three{
+	width:40px;
+}
+.nav:hover span{
+	width:45px;
+}
+</style>
+</head>
+<body>
+<div id="sidebar">
+	<div class="nav" onclick="toggle();">
+		<span class="one"></span>
+		<span class="two"></span>
+		<span class="three"></span>
+	</div>
+	<ul>
+		<li>Home</li>
+		<li>About</li>
+		<li>Contact</li>
+	</ul>
+</div>
+</body>
+</html>
